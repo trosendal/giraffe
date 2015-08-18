@@ -1,0 +1,14 @@
+Package: giraffe
+Type: Package
+Title: View pretty diffs between commits of tabular data
+Version: 0.1
+Date: 2015-08-18
+Authors@R: c(person("Thomas", "Rosendal", role = c("aut", "cre"),
+    email = "thomas.rosendal@sva.se"))
+Description: Tablular git diff viewer
+Imports:
+    git2r,
+    daff
+Depends:
+    methods
+License: If you find it useful use it.
