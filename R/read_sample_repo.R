@@ -10,5 +10,5 @@
 #'  summary(repo)
 
 read_sample_repo <- function() {
-  repository(paste0(path.package("giraffe"), "/extdata/repo/"))
+  repository(paste0(path.package("giraffe"), "/extdata/repo.git"))
 }
