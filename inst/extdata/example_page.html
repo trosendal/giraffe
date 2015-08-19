@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title></title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+
+  <style TYPE='text/css'>
+    .highlighter .add {
+    background-color: #7fff7f;
+    }
+    .highlighter .remove {
+    background-color: #ff7f7f;
+    }
+
+    .highlighter td.modify {
+    background-color: #7f7fff;
+    }
+
+    .highlighter td.conflict {
+    background-color: #f00;
+    }
+
+    .highlighter .spec {
+    background-color: #aaa;
+    }
+
+    .highlighter .move {
+    background-color: #ffa;
+    }
+
+    .highlighter .null {
+    color: #888;
+    }
+
+    .highlighter table {
+    border-collapse:collapse;
+    }
+
+    .highlighter td, .highlighter th {
+    border: 1px solid #2D4068;
+    padding: 3px 7px 2px;
+    }
+
+    .highlighter th, .highlighter .header {
+    background-color: #aaf;
+    font-weight: bold;
+    padding-bottom: 4px;
+    padding-top: 5px;
+    text-align:left;
+    }
+
+    .highlighter tr:first-child td {
+    border-top: 1px solid #2D4068;
+    }
+
+    .highlighter td:first-child {
+    border-left: 1px solid #2D4068;
+    }
+
+    .highlighter td {
+    empty-cells: show;
+    }
+</style>
+
+</head>
+<body>
+
+<div class="container">
+  <h2>Analysis of changes in test.csv</h2>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1">Original Data</a></li>
+    <li><a href="#tab2">Change 1</a></li>
+    <li><a href="#tab3">Change 2</a></li>
+    <li><a href="#tab4">Final Data</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="tab1" class="tab-pane fade in active">
+      <h3></h3>
+<div class='highlighter'>
+
+<table border=1>
+<tr> <th>  </th> <th> ID </th> <th> aspA </th> <th> glnA </th> <th> gltA </th> <th> glyA </th> <th> pgm </th> <th> tkt </th> <th> uncA </th> <th> ST </th> <th> CC </th>  </tr>
+  <tr> <td align="right"> 1 </td> <td> 2135-12 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">   1 </td> <td align="right">   2 </td> <td align="right">   7 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  48 </td> <td> ST-48 complex </td> </tr>
+  <tr> <td align="right"> 2 </td> <td> 14445-12 </td> <td align="right">  10 </td> <td align="right">  33 </td> <td align="right">  22 </td> <td align="right">  49 </td> <td align="right">  43 </td> <td align="right">  82 </td> <td align="right">  31 </td> <td align="right"> 637 </td> <td> ST-1275 complex </td> </tr>
+  <tr> <td align="right"> 3 </td> <td> 82420-11 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 4 </td> <td> 72645-11 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 5 </td> <td> 13041-12 </td> <td align="right">   1 </td> <td align="right">   4 </td> <td align="right">   2 </td> <td align="right">   2 </td> <td align="right">   6 </td> <td align="right">   3 </td> <td align="right">  17 </td> <td align="right">  61 </td> <td> ST-61 complex </td> </tr>
+  <tr> <td align="right"> 6 </td> <td> 13044-12 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">  12 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  50 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 7 </td> <td> 6506-11 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 8 </td> <td> 13968-12 </td> <td align="right">   9 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">  62 </td> <td align="right">   4 </td> <td align="right">   5 </td> <td align="right">   6 </td> <td align="right"> 257 </td> <td> ST-257 complex </td> </tr>
+  <tr> <td align="right"> 9 </td> <td> 39 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   1 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  21 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 10 </td> <td> 40 </td> <td align="right">  64 </td> <td align="right">  22 </td> <td align="right">  77 </td> <td align="right"> 155 </td> <td align="right"> 134 </td> <td align="right"> 101 </td> <td align="right">  16 </td> <td align="right"> 6442 </td> <td>  </td> </tr>
+  <tr> <td align="right"> 11 </td> <td> 13969-12 </td> <td align="right">   9 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">  62 </td> <td align="right">   4 </td> <td align="right">   5 </td> <td align="right">   6 </td> <td align="right"> 257 </td> <td> ST-257 complex </td> </tr>
+  <tr> <td align="right"> 12 </td> <td> 15663-12 </td> <td align="right">  10 </td> <td align="right">  27 </td> <td align="right">  59 </td> <td align="right">  19 </td> <td align="right">  10 </td> <td align="right">   5 </td> <td align="right">   7 </td> <td align="right"> 1775 </td> <td> ST-403 complex </td> </tr>
+  <tr> <td align="right"> 13 </td> <td> 87 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 14 </td> <td> 7299-12 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   1 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  21 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 15 </td> <td> 116 </td> <td align="right">   4 </td> <td align="right">   7 </td> <td align="right">  10 </td> <td align="right">   4 </td> <td align="right">   1 </td> <td align="right">   7 </td> <td align="right">   1 </td> <td align="right">  45 </td> <td> ST-45 complex </td> </tr>
+  <tr> <td align="right"> 16 </td> <td> 51 </td> <td align="right">  </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   6 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 17 </td> <td> 52 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 18 </td> <td> 85 </td> <td align="right">  18 </td> <td align="right">   7 </td> <td align="right"> 212 </td> <td align="right"> 111 </td> <td align="right"> 122 </td> <td align="right"> 103 </td> <td align="right">  16 </td> <td align="right"> 2545 </td> <td>  </td> </tr>
+  <tr> <td align="right"> 19 </td> <td> 620 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   1 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  21 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 20 </td> <td> 86 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">   1 </td> <td align="right">   2 </td> <td align="right">   7 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  48 </td> <td> ST-48 complex </td> </tr>
+  <tr> <td align="right"> 21 </td> <td> 124 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 22 </td> <td> 44289-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  79 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 23 </td> <td> 123 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> </tr>
+  <tr> <td align="right"> 24 </td> <td> 64446-11 </td> <td align="right">  33 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right"> 394 </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 25 </td> <td> 50587-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  79 </td> <td align="right"> 113 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 26 </td> <td> 50588-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  79 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 27 </td> <td> 25758-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right"> 113 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 28 </td> <td> 2799-12 </td> <td align="right">   1 </td> <td align="right">   2 </td> <td align="right">  42 </td> <td align="right">   4 </td> <td align="right">  98 </td> <td align="right">  58 </td> <td align="right">  34 </td> <td align="right"> 586 </td> <td>  </td> </tr>
+  <tr> <td align="right"> 29 </td> <td> 67 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  41 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   7 </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 30 </td> <td> 69 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 31 </td> <td> 220 </td> <td align="right">   1 </td> <td align="right">  </td> <td align="right">  59 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   7 </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 32 </td> <td> 245 </td> <td align="right">  18 </td> <td align="right">  89 </td> <td align="right">  77 </td> <td align="right">  98 </td> <td align="right"> 122 </td> <td align="right">  94 </td> <td align="right">  16 </td> <td align="right"> 6447 </td> <td> ST-952 complex </td> </tr>
+  <tr> <td align="right"> 33 </td> <td> 91 </td> <td align="right">  </td> <td align="right">  22 </td> <td align="right">  68 </td> <td align="right">  97 </td> <td align="right"> 134 </td> <td align="right"> 301 </td> <td align="right">  16 </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 34 </td> <td> 96 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 35 </td> <td> 100 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 36 </td> <td> 69966-11 </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 37 </td> <td> 23423 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  76 </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 38 </td> <td> 13 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> </tr>
+  <tr> <td align="right"> 39 </td> <td> 46 </td> <td align="right">  </td> <td align="right">   1 </td> <td align="right">  42 </td> <td align="right">   3 </td> <td align="right"> 148 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  </td> <td>  </td> </tr>
+   </table>
+
+</div> <!--Close device of highlighter class-->
+</div> <!--Close device of the current tab-->
+
+
+    <div id="tab2" class="tab-pane fade">
+      <h3></h3>
+<div class='highlighter'>
+
+<table>
+<tr class="spec"><td>!</td><td></td><td></td><td>...</td><td></td><td class="add">+++</td></tr>
+<tr><th>@@</th><th>ID</th><th>aspA</th><th>...</th><th>CC</th><th class="add">size</th></tr>
+<tr><td>+</td><td>2135-12</td><td>2</td><td>...</td><td>ST-48 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>14445-12</td><td>10</td><td>...</td><td>ST-1275 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>82420-11</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>72645-11</td><td>2</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>13041-12</td><td>1</td><td>...</td><td>ST-61 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>13044-12</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>6506-11</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>13968-12</td><td>9</td><td>...</td><td>ST-257 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>39</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>40</td><td>64</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>13969-12</td><td>9</td><td>...</td><td>ST-257 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>15663-12</td><td>10</td><td>...</td><td>ST-403 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>87</td><td>2</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>7299-12</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>116</td><td>4</td><td>...</td><td>ST-45 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>51</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>52</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>85</td><td>18</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>620</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>86</td><td>2</td><td>...</td><td>ST-48 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>124</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>44289-11</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>123</td><td>2</td><td>...</td><td>ST-21 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>64446-11</td><td>33</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>50587-11</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>50588-11</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>25758-11</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>2799-12</td><td>1</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>67</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>69</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>220</td><td>1</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>245</td><td>18</td><td>...</td><td>ST-952 complex</td><td class="add">34</td></tr>
+<tr><td>+</td><td>91</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>96</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>100</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>69966-11</td><td>4</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>13</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+<tr><td>+</td><td>46</td><td>NA</td><td>...</td><td></td><td class="add">34</td></tr>
+</table>
+
+</div> <!--Close device of highlighter class-->
+</div> <!--Close device of the current tab-->
+
+
+
+    <div id="tab3" class="tab-pane fade">
+      <h3></h3>
+<div class='highlighter'>
+
+<table>
+<tr><th>@@</th><th>ID</th><th>aspA</th><th>glnA</th><th>gltA</th><th>glyA</th><th>pgm</th><th>tkt</th><th>uncA</th><th>ST</th><th>CC</th><th>size</th></tr>
+<tr><td></td><td>2135-12</td><td>2</td><td>4</td><td>1</td><td>2</td><td>7</td><td>1</td><td>5</td><td>48</td><td>ST-48 complex</td><td>34</td></tr>
+<tr class="add"><td>+++</td><td>13041-12</td><td>1</td><td>4</td><td>2</td><td>2</td><td>6</td><td>3</td><td>17</td><td>61</td><td>ST-61 complex</td><td>34</td></tr>
+<tr><td></td><td>14445-12</td><td>10</td><td>33</td><td>22</td><td>49</td><td>43</td><td>82</td><td>31</td><td>637</td><td>ST-1275 complex</td><td>34</td></tr>
+<tr><td></td><td>82420-11</td><td>2</td><td>1</td><td>5</td><td>3</td><td>2</td><td>1</td><td>5</td><td>19</td><td>ST-21 complex</td><td>34</td></tr>
+<tr class="modify"><td class="modify">-></td><td>72645-11</td><td>2</td><td>NA</td><td>NA</td><td>NA</td><td class="modify">NA->46</td><td>NA</td><td>NA</td><td>NA</td><td></td><td>34</td></tr>
+<tr class="remove"><td>---</td><td>13041-12</td><td>1</td><td>4</td><td>2</td><td>2</td><td>6</td><td>3</td><td>17</td><td>61</td><td>ST-61 complex</td><td>34</td></tr>
+<tr><td></td><td>13044-12</td><td>2</td><td>1</td><td>12</td><td>3</td><td>2</td><td>1</td><td>5</td><td>50</td><td>ST-21 complex</td><td>34</td></tr>
+<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>40</td><td>64</td><td>22</td><td>77</td><td>155</td><td>134</td><td>101</td><td>16</td><td>6442</td><td></td><td>34</td></tr>
+<tr class="move"><td>:</td><td>96</td><td>NA</td><td>NA</td><td>4</td><td>NA</td><td>34</td><td>NA</td><td>NA</td><td>NA</td><td></td><td>34</td></tr>
+<tr><td></td><td>13969-12</td><td>9</td><td>2</td><td>4</td><td>62</td><td>4</td><td>5</td><td>6</td><td>257</td><td>ST-257 complex</td><td>34</td></tr>
+<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>620</td><td>2</td><td>1</td><td>1</td><td>3</td><td>2</td><td>1</td><td>5</td><td>21</td><td>ST-21 complex</td><td>34</td></tr>
+<tr class="add"><td>+++</td><td>13041-12</td><td>1</td><td>4</td><td>2</td><td>2</td><td>6</td><td>3</td><td>17</td><td>61</td><td>ST-61 complex</td><td>34</td></tr>
+<tr><td></td><td>86</td><td>2</td><td>4</td><td>1</td><td>2</td><td>7</td><td>1</td><td>5</td><td>48</td><td>ST-48 complex</td><td>34</td></tr>
+<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+<tr><td></td><td>100</td><td>NA</td><td>NA</td><td>2</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td></td><td>34</td></tr>
+<tr class="modify"><td class="modify">-></td><td>69966-11</td><td>4</td><td>NA</td><td>NA</td><td>NA</td><td class="modify">NA->43</td><td>NA</td><td>NA</td><td>NA</td><td></td><td>34</td></tr>
+<tr><td></td><td>13</td><td>NA</td><td>NA</td><td>2</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td>NA</td><td></td><td>34</td></tr>
+<tr><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td><td>...</td></tr>
+</table>
+
+</div> <!--Close device of highlighter class-->
+</div> <!--Close device of the current tab-->
+
+
+    <div id="tab4" class="tab-pane fade">
+      <h3></h3>
+
+<div class='highlighter'>
+
+<table border=1>
+<tr> <th>  </th> <th> ID </th> <th> aspA </th> <th> glnA </th> <th> gltA </th> <th> glyA </th> <th> pgm </th> <th> tkt </th> <th> uncA </th> <th> ST </th> <th> CC </th> <th> size </th>  </tr>
+  <tr> <td align="right"> 1 </td> <td> 2135-12 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">   1 </td> <td align="right">   2 </td> <td align="right">   7 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  48 </td> <td> ST-48 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 2 </td> <td> 13041-12 </td> <td align="right">   1 </td> <td align="right">   4 </td> <td align="right">   2 </td> <td align="right">   2 </td> <td align="right">   6 </td> <td align="right">   3 </td> <td align="right">  17 </td> <td align="right">  61 </td> <td> ST-61 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 3 </td> <td> 14445-12 </td> <td align="right">  10 </td> <td align="right">  33 </td> <td align="right">  22 </td> <td align="right">  49 </td> <td align="right">  43 </td> <td align="right">  82 </td> <td align="right">  31 </td> <td align="right"> 637 </td> <td> ST-1275 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 4 </td> <td> 82420-11 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 5 </td> <td> 72645-11 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  46 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 6 </td> <td> 13044-12 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">  12 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  50 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 7 </td> <td> 6506-11 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 8 </td> <td> 13968-12 </td> <td align="right">   9 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">  62 </td> <td align="right">   4 </td> <td align="right">   5 </td> <td align="right">   6 </td> <td align="right"> 257 </td> <td> ST-257 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 9 </td> <td> 39 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   1 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  21 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 10 </td> <td> 40 </td> <td align="right">  64 </td> <td align="right">  22 </td> <td align="right">  77 </td> <td align="right"> 155 </td> <td align="right"> 134 </td> <td align="right"> 101 </td> <td align="right">  16 </td> <td align="right"> 6442 </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 11 </td> <td> 96 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  34 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 12 </td> <td> 13969-12 </td> <td align="right">   9 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">  62 </td> <td align="right">   4 </td> <td align="right">   5 </td> <td align="right">   6 </td> <td align="right"> 257 </td> <td> ST-257 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 13 </td> <td> 15663-12 </td> <td align="right">  10 </td> <td align="right">  27 </td> <td align="right">  59 </td> <td align="right">  19 </td> <td align="right">  10 </td> <td align="right">   5 </td> <td align="right">   7 </td> <td align="right"> 1775 </td> <td> ST-403 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 14 </td> <td> 87 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 15 </td> <td> 7299-12 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   1 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  21 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 16 </td> <td> 116 </td> <td align="right">   4 </td> <td align="right">   7 </td> <td align="right">  10 </td> <td align="right">   4 </td> <td align="right">   1 </td> <td align="right">   7 </td> <td align="right">   1 </td> <td align="right">  45 </td> <td> ST-45 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 17 </td> <td> 51 </td> <td align="right">  </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   6 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 18 </td> <td> 52 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 19 </td> <td> 85 </td> <td align="right">  18 </td> <td align="right">   7 </td> <td align="right"> 212 </td> <td align="right"> 111 </td> <td align="right"> 122 </td> <td align="right"> 103 </td> <td align="right">  16 </td> <td align="right"> 2545 </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 20 </td> <td> 620 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   1 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  21 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 21 </td> <td> 13041-12 </td> <td align="right">   1 </td> <td align="right">   4 </td> <td align="right">   2 </td> <td align="right">   2 </td> <td align="right">   6 </td> <td align="right">   3 </td> <td align="right">  17 </td> <td align="right">  61 </td> <td> ST-61 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 22 </td> <td> 86 </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">   1 </td> <td align="right">   2 </td> <td align="right">   7 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  48 </td> <td> ST-48 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 23 </td> <td> 124 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   5 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 24 </td> <td> 44289-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  79 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 25 </td> <td> 123 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">   3 </td> <td align="right">   2 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  19 </td> <td> ST-21 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 26 </td> <td> 64446-11 </td> <td align="right">  33 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right"> 394 </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 27 </td> <td> 50587-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   4 </td> <td align="right">  79 </td> <td align="right"> 113 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 28 </td> <td> 50588-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  79 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 29 </td> <td> 25758-11 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right"> 113 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 30 </td> <td> 2799-12 </td> <td align="right">   1 </td> <td align="right">   2 </td> <td align="right">  42 </td> <td align="right">   4 </td> <td align="right">  98 </td> <td align="right">  58 </td> <td align="right">  34 </td> <td align="right"> 586 </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 31 </td> <td> 67 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  41 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   7 </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 32 </td> <td> 69 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 33 </td> <td> 220 </td> <td align="right">   1 </td> <td align="right">  </td> <td align="right">  59 </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   7 </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 34 </td> <td> 245 </td> <td align="right">  18 </td> <td align="right">  89 </td> <td align="right">  77 </td> <td align="right">  98 </td> <td align="right"> 122 </td> <td align="right">  94 </td> <td align="right">  16 </td> <td align="right"> 6447 </td> <td> ST-952 complex </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 35 </td> <td> 91 </td> <td align="right">  </td> <td align="right">  22 </td> <td align="right">  68 </td> <td align="right">  97 </td> <td align="right"> 134 </td> <td align="right"> 301 </td> <td align="right">  16 </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 36 </td> <td> 100 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 37 </td> <td> 69966-11 </td> <td align="right">   4 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  43 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 38 </td> <td> 13 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">   2 </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+  <tr> <td align="right"> 39 </td> <td> 46 </td> <td align="right">  </td> <td align="right">   1 </td> <td align="right">  42 </td> <td align="right">   3 </td> <td align="right"> 148 </td> <td align="right">   1 </td> <td align="right">   5 </td> <td align="right">  </td> <td>  </td> <td align="right">  34 </td> </tr>
+</table>
+
+</div> <!--Close device of highlighter class-->
+</div> <!--Close device of the current tab-->
+
+</div><!--Close the device for content of tabs-->
+</div><!--Close the device for tabs -->
+
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+        $(this).tab('show');
+    });
+});
+</script>
+
+</body>
+</html>
