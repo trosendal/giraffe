@@ -56,42 +56,50 @@ render_tables <- function(repo, path){
     tabs <- make_tables(repo, path)
 
     l1h <- '<div class="tab-content">'
-    l2h <- '<div id="initial" class="tab-pane fade in active">'
-    l3h <- '<h3>DATE OF INITIAL COMMIT</h3>'
-    l5h <- '</div>'
+    l2h <- '<div id="tab1" class="tab-pane fade in active">'
+    l3h <- '<h3></h3>'
+    l4h <- "<div class='highlighter'>"
+    l5h <- '</div><!--Close device of highlighter class-->'
+    l6h <- '</div><!--Close device of the current tab-->'
 
-    l2l <- '<div id="final" class="tab-pane fade">'
-    l3l <- '<h3>DATE OF FINAL COMMIT</h3>'
-    l5l <- '</div></div></div></body></html>'
+    l2l <- '<div id="ID_FIELD" class="tab-pane fade">'
+    l3l <- '<h3></h3>'
+    l4l <- "<div class='highlighter'>"
+    l5l <- c('<script>','$(document).ready(function(){','    $(".nav-tabs a").click(function(){',
+        "$(this).tab('show');",'    });','});','</script>)')
+    l6l <- c('</div>','</div>','</div>','</div>')
+    l7l <- c('</body>','</html>')
 
     l2d <- '<div id="ID_FIELD" class="tab-pane fade">'
-    l3d <- '<h3>DATE OF COMMIT</h3>'
-    l5d <- '</div>'
+    l3d <- '<h3></h3>'
+    l4d <- "<div class='highlighter'>"
+    l5d <- '</div><!--Close device of highlighter class-->'
+    l6d <- '</div><!--Close device of the current tab-->'
 
     for(i in seq_along(tabs)){
         if(i == 1){
-        tabs[i] <- paste0(l1h, l2h, l3h, tabs[i], l5h)}
+        tab_content <- c(l1h, l2h, l3h, l4h, rep("",2),tabs[i], rep("",2), l5h, l6h, rep("",5))}
         if(i == length(tabs)){
-        tabs[i] <- paste0(l2l, l3l, tabs[i], l5l)}
+        tab_content <- c(tab_content, c(gsub("ID_FIELD", paste0("tab", i),l2l), l3l, l4l, rep("",2), tabs[i], rep("",2), l6l, l5l, l7l))}
         if(i>1 & i<length(tabs)){
-        tabs[i] <- paste0(gsub("ID_FIELD", paste0("tab", i), l2d), l3d, tabs[i], l5d)}
+        tab_content <- c(tab_content, c(gsub("ID_FIELD", paste0("tab", i), l2d), l3d, l4d, rep("",2), tabs[i], rep("",2), l5d, l6d), rep("",5))}
     }
 
     tl1 <- '<div class="container">'
-    tl2 <- '<h2>NAME OF .CSV FILE AND REPOSITORY</h2>'
+    tl2 <- '<h2>Analysis of changes to csv file</h2>'
     tl3 <- '<ul class="nav nav-tabs">'
-    tlfirsttab <- '<li class="active"><a data-toggle="tab" href="#ID_FIELD">TITLE_FIELD</a></li>'
-    tlmiddle <- '<li><a data-toggle="tab" href="#ID_FIELD">TITLE_FIELD</a></li>'
+    tlfirsttab <- '<li class="active"><a href="#ID_FIELD">TITLE_FIELD</a></li>'
+    tlmiddle <- '<li><a href="#ID_FIELD">TITLE_FIELD</a></li>'
     tl6 <- '</ul>'
-    tab_definitions <- paste0(tl1, tl2, tl3, gsub("TITLE_FIELD","Original Data",gsub("ID_FIELD", "tab1",tlfirsttab)))
+    tab_definitions <- c(tl1, tl2, tl3, gsub("TITLE_FIELD","Original Data",gsub("ID_FIELD", "tab1",tlfirsttab)))
 
     for(i in seq_len(length(tabs)-2)+1){
         tab_definitions <- c(tab_definitions,gsub("TITLE_FIELD",paste0("Change", i-1),gsub("ID_FIELD",paste0("tab",i),tlmiddle)))
     }
-        tab_definitions <- c(tab_definitions, gsub("TITLE_FIELD","Final Data",gsub("ID_FIELD",paste0("tab",length(tabs)),tlmiddle)))
+        tab_definitions <- c(tab_definitions, gsub("TITLE_FIELD","Final Data",gsub("ID_FIELD",paste0("tab",length(tabs)),tlmiddle)), tl6)
 
     data(header)
-    result <- c(header, tab_definitions, tabs)
+    result <- c(header, tab_definitions, rep("", 5), tab_content)
 
 return(result)
 
