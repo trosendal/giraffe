@@ -11,12 +11,13 @@ This is a first draft! So nothing may work as expected
 ```
 # install.packages("devtools")
 library(devtools)
-install_github("giraffe", "trosendal")
+install_github("trosendal/giraffe")
 ```
 
 ## Example
 
 ```
+library(giraffe)
 repo <- read_sample_repo()
 path <- "test.csv"
 filename <- tempfile(fileext = ".html")
