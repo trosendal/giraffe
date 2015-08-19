@@ -2,5 +2,7 @@
 
 export(make_tables)
 export(read_sample_repo)
+export(render_tables)
 import(daff)
 import(git2r)
+import(xtable)
