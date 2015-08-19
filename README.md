@@ -14,6 +14,16 @@ library(devtools)
 install_github("giraffe", "trosendal")
 ```
 
+## Example
+
+```
+repo <- read_sample_repo()
+path <- "test.csv"
+filename <- tempfile(fileext = ".html")
+writeLines(render_tables(repo, path), filename)
+utils::browseURL(filename)
+```
+
 
 Licence
 -------
