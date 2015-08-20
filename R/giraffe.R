@@ -51,7 +51,7 @@ make_tables <- function(repo = repo, path = "test.csv"){
 #'  repo <- read_sample_repo()
 #'  render_tables(repo = repo, path = "test.csv")
 
-render_tables <- function(repo, path){
+render_tables <- function(repo, path, view = TRUE){
 
     tabs <- make_tables(repo, path)
 
@@ -101,6 +101,12 @@ render_tables <- function(repo, path){
     data(header)
     result <- c(header, tab_definitions, rep("", 5), tab_content)
 
-return(result)
+    if(view) {
+        filename <- tempfile(fileext = ".html")
+        writeLines(result, filename)
+        utils::browseURL(filename)
+    }
+    cat("Resultant html is invisible; if you want it assign it to an object")
+    invisible(result)
 
 }
