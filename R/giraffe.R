@@ -11,7 +11,11 @@ get_blobs <- function(repo = repo, path = "test.csv"){
     blobs <- odb_blobs(repo)
     files <- paste0(ifelse(nchar(blobs$path) > 0, paste0(blobs$path, "/"), ""), blobs$name)
     i <- grep(path, files)
-    lapply(blobs[i, "sha"], function(sha) lookup(repo, sha))
+    result <- lapply(blobs[i, "sha"], function(sha){
+        lookup(repo, sha)
+    })
+    dates <- blobs[i,'when']
+    return(list(result, dates))
 }
 
 #' render diffs of an object in the git database
@@ -28,16 +32,35 @@ get_blobs <- function(repo = repo, path = "test.csv"){
 
 make_tables <- function(repo = repo, path = "test.csv"){
 
-    dfs <- lapply(get_blobs(repo = repo, path = path), function(x) read.csv2(textConnection(content(x))))
+    blobs <- get_blobs(repo = repo, path = path)
+
+    dfs <- lapply(blobs[[1]], function(x){
+        read.csv2(textConnection(content(x)))
+    })
+
     file_seq <- seq_along(dfs)[1:(length(seq_along(dfs))-1)]
-    file_names <- unlist(lapply(file_seq,function(dummy){tempfile(fileext = ".html")}))
-    pages <- unlist(lapply(file_seq, function(x) {
+    file_names <- unlist(lapply(file_seq,function(dummy){
+        tempfile(fileext = ".html")
+    }))
+
+    diff_pages <- unlist(lapply(file_seq, function(x) {
         render_diff(diff_data(dfs[[x]], dfs[[x+1]]), view = FALSE, fragment = TRUE,file = file_names[x])
     }))
-    page1 <- print(xtable(dfs[[1]]), type = "html", print.results = FALSE)
-    pagelast <- print(xtable(dfs[[length(dfs)]]), type = "html", print.results = FALSE)
-    pages <- c(page1, pages, pagelast)
-    return(pages)
+
+    full_table_pages <- unlist(lapply(seq_along(dfs), function(x){
+        print(xtable(dfs[[x]]), type = 'html', print.results = FALSE)
+    }))
+
+## build into order for tabs on page
+
+    output <- full_table_pages[1]
+
+    for(i in file_seq + 1){
+        output <- c(output,diff_pages[i-1],full_table_pages[i])
+    }
+
+    dates <- blobs[[2]]
+    return(list(output, dates))
 }
 
 #' Make a webpage of the tables
@@ -53,7 +76,8 @@ make_tables <- function(repo = repo, path = "test.csv"){
 
 render_tables <- function(repo, path, view = TRUE){
 
-    tabs <- make_tables(repo, path)
+    page_content <- make_tables(repo, path)
+    tabs <- page_content[[1]]
 
     l1h <- '<div class="tab-content">'
     l2h <- '<div id="tab1" class="tab-pane fade in active">'
@@ -77,11 +101,14 @@ render_tables <- function(repo, path, view = TRUE){
     l6d <- '</div><!--Close device of the current tab-->'
 
     for(i in seq_along(tabs)){
-        if(i == 1){
-        tab_content <- c(l1h, l2h, l3h, l4h, rep("",2),tabs[i], rep("",2), l5h, l6h, rep("",5))}
-        if(i == length(tabs)){
-        tab_content <- c(tab_content, c(gsub("ID_FIELD", paste0("tab", i),l2l), l3l, l4l, rep("",2), tabs[i], rep("",2), l6l, l5l, l7l))}
-        if(i>1 & i<length(tabs)){
+        if(i %% 2 == 1){
+            if(i == length(tabs)){
+                tab_content <- c(tab_content, c(gsub("ID_FIELD", paste0("tab", i),l2l), l3l, l4l, rep("",2), tabs[i], rep("",2), l6l, l5l, l7l))
+            }else{
+                tab_content <- c(l1h, l2h, l3h, l4h, rep("",2),tabs[i], rep("",2), l5h, l6h, rep("",5))
+            }
+        }
+        if(i %% 2 == 0){
         tab_content <- c(tab_content, c(gsub("ID_FIELD", paste0("tab", i), l2d), l3d, l4d, rep("",2), tabs[i], rep("",2), l5d, l6d), rep("",5))}
     }
 
@@ -106,7 +133,7 @@ render_tables <- function(repo, path, view = TRUE){
         writeLines(result, filename)
         utils::browseURL(filename)
     }
-    cat("Resultant html is invisible; if you want it assign it to an object")
+    cat("Resultant html is invisible; if you want it assign it to an object\n")
     invisible(result)
 
 }
