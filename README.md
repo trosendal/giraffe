@@ -41,8 +41,6 @@ library(git2r)
 repo <- repository("path to your repo")
 ```
 
-
-
 Licence
 -------
 
