@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Case</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h3>Tabs With Dropdown Menu</h3>
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#tab1">Home</a></li>
+    <li class="dropdown">
+      <a class="dropdown-toggle" data-toggle="dropdown" href="#">Tab 2 <span class="caret"></span></a>
+      <ul class="dropdown-menu">
+        <li><a href="#tab2">Tab 2-1</a></li>
+        <li><a href="#tab3">Tab 2-2</a></li>
+        <li><a href="#tab4">Tab 2-3</a></li>                        
+      </ul>
+    </li>
+    <li><a href="#tab5">Tab 3</a></li>
+    <li><a href="#tab6">Tab 4</a></li>
+  </ul>
+
+  <div class="tab-content">
+    <div id="tab1" class="tab-pane fade in active">
+      <p>Text content of First tab</p>
+    </div>
+
+    <div id="tab2" class="tab-pane fade">
+      <p>Text content of second tab first dropdown item</p>
+    </div>
+
+    <div id="tab3" class="tab-pane fade">
+      <p>Content of second tab second drop down item</p>
+    </div>
+
+    <div id="tab4" class="tab-pane fade">
+      <p>Content of second tab, third drop down item</p>
+    </div>
+
+    <div id="tab5" class="tab-pane fade">
+      <p>Content of Third tab</p>
+    </div>
+
+    <div id="tab6" class="tab-pane fade">
+      <p>Contetnt of forth tab</p>
+    </div>
+
+  </div>
+</div>
+
+<script>
+$(document).ready(function(){
+    $(".nav-tabs a").click(function(){
+$(this).tab('show');
+    });
+});
+</script>
+
+
+</body>
+</html>

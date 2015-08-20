@@ -3,7 +3,7 @@ Title: View pretty diffs between commits of tabular data
 Version: 0.1
 Date: 2015-08-18
 Authors@R: c(person("Thomas", "Rosendal", role = c("aut", "cre"),
-    email = "thomas.rosendal@sva.se"))
+    email = "trosendal@gamil.com"))
 Description: Tablular git diff viewer
 License: GPL2
 Type: Package
