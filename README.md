@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/trosendal/giraffe.svg)](https://travis-ci.org/trosendal/giraffe)
+
 # Giraffe
 
 Giraffe is a package that uses the functionality of
